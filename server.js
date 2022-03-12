@@ -14,7 +14,7 @@ db.on('error', (err) => {
 
 
 db.once('open', () => {
-    console.log('DB connection Established')
+    console.log('Database connection Established')
 })
 
 
