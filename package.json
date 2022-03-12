@@ -1,0 +1,27 @@
+{
+  "name": "nodelog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivam66151/log-system-node.git"
+  },
+  "author": "Shivam Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivam66151/log-system-node/issues"
+  },
+  "homepage": "https://github.com/shivam66151/log-system-node#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
