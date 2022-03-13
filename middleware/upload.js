@@ -17,6 +17,7 @@ var upload = multer({
         if(
 
             file.mimetype == "image/png" || 
+            file.mimetype == "image/jpeg" || 
             file.mimetype == "image/jpg"
         
         ) {

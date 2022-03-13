@@ -38,8 +38,19 @@ const store = (req, res, next) => {
         email: req.body.email,
         department: req.body.department
     })
+    // To store multiple files
+    
+    // if(req.files) {
+    //     let path = ''
+    //     req.files.forEach(function(files, index, arr) {
+    //         path = path + files.path + ','
+    //     })
+    //     path = path.substring(0, path.lastIndexOf(","))
+    //     student.avatar = path
+    // }
+     
     if(req.file) {
-        student.face = req.file.path
+      student.avatar = req.file.path
     }
     student.save()
     .then(response => {
