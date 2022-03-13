@@ -1,6 +1,5 @@
-const User = require(../models/User)
+const User = require('../models/User')
 const bcrypt = require('bcryptjs')
-const res = require('express/lib/response')
 const jwt = require('jsonwebtoken')
 
 const register = (req,res,next) => {
@@ -26,3 +25,12 @@ user.save()
        message: "User Added Successfully"
    }) 
 })
+.catch(error => {
+    res.json({
+        message: "Error occured!"
+    })
+})
+
+module.exports = {
+    register
+}
