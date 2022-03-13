@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
-
+const StudentRoute = require('./routes/student')
 mongoose.connect('mongodb://localhost:27017/proctorsam', {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
@@ -27,5 +27,7 @@ app.use(bodyParser.json())
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
-    console.log('Server is running on port ${PORT}')
+    console.log(`Server is running on port ${PORT}`)
 })
+
+app.use('/api/student', StudentRoute)
