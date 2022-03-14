@@ -9,9 +9,15 @@ const authenticate = (req,res, next) => {
         next()
     }
     catch(error) {
-        res.json({
-            message: 'Authentication failed'
-        })
+        if(error.name == "TokenExpiredError") {
+            res.status(401).json({
+                message: 'Token Expired!'
+            })
+        } else {
+            res.json({
+                message: 'Authentication failed'
+            })
+        }
     }
 }
 
