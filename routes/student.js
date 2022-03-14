@@ -2,11 +2,10 @@ const express = require('express')
 const router = express.Router()
 
 const StudentController = require('../controllers/Studentcontroller')
-
-
 const upload = require('../middleware/upload')
+const authenticate = require('../middleware/authenticate')
 
-router.get('/', StudentController.index)
+router.get('/', authenticate, StudentController.index)
 router.post('/show', StudentController.show)
 // router.post('/store', StudentController.store)
 router.post('/store', upload.single('avatar'), StudentController.store)
