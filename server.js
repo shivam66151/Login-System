@@ -1,9 +1,9 @@
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
-dotenv.config()
+// dotenv.config()
 
 const StudentRoute = require('./routes/student')
 const AuthRoute = require('./routes/auth')
