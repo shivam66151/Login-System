@@ -1,9 +1,8 @@
+const dotenv = require('dotenv')
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
-
-const dotenv = require('dotenv')
 dotenv.config()
 
 const StudentRoute = require('./routes/student')
