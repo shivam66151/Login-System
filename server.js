@@ -3,11 +3,14 @@ const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
+const dotenv = require('dotenv')
+dotenv.config()
+
 const StudentRoute = require('./routes/student')
 const AuthRoute = require('./routes/auth')
 
 
-mongoose.connect('mongodb://localhost:27017/proctorsam', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/Proctorsam', {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
 
